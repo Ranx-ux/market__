@@ -1,0 +1,237 @@
+/* Reset CSS untuk memastikan semua browser tampil serupa */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111; /* Background gelap untuk memberikan kesan elegan */
+  font-family: 'Roboto', sans-serif; /* Menggunakan font yang modern */
+  color: #fff;
+}
+
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  background-color: #1c1c1c; /* Kontainer dengan warna abu-abu gelap */
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memastikan konten di dalamnya terpusat secara horizontal */
+  justify-content: center; /* Menempatkan konten di tengah secara vertikal */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #69c2b0; /* Warna hijau neon */
+  animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.username {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUsername 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUsername {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bio {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeInBio 1.5s ease-out 1s forwards;
+}
+
+@keyframes fadeInBio {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mengatur bagian layanan untuk terpusat di dalam kontainer */
+.services {
+  text-align: left;
+  opacity: 0;
+  animation: fadeInServices 1s ease-out 1.5s forwards;
+  width: 100%;
+}
+
+.services-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.service-list {
+  list-style-type: none;
+  color: #ddd;
+  font-size: 14px;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.service-list li {
+  margin-bottom: 15px;
+}
+
+@keyframes fadeInServices {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInLinks 1s ease-out 2s forwards;
+  width: 100%;
+}
+
+@keyframes fadeInLinks {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bg-primary {
+  background-color: #69c2b0; /* Warna hijau neon */
+}
+
+.bg-primary:hover {
+  background-color: #42b99d; /* Hijau lebih gelap */
+}
+
+.bg-whatsapp {
+  background-color: #25d366; /* Warna hijau WhatsApp */
+}
+
+.bg-whatsapp:hover {
+  background-color: #128c7e; /* Hijau lebih gelap */
+}
+
+.link-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.fab {
+  font-size: 20px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .username {
+    font-size: 24px;
+  }
+
+  .bio {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .link-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
